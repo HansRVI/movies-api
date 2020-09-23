@@ -152,7 +152,7 @@ const moviesMock = [
 	},
 ];
 
-function filteredMoviesMocks(tag) {
+function filteredMoviesMock(tag) {
 	return moviesMock.filter((movie) => movie.tags.includes(tag));
 }
 
@@ -168,6 +168,6 @@ class MoviesServiceMock {
 
 module.exports = {
 	moviesMock,
-	filteredMoviesMocks,
+	filteredMoviesMock,
 	MoviesServiceMock,
 };
