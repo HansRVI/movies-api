@@ -9,15 +9,22 @@ const moviesApi = require("./routes/movies.js");
 const {
 	logErrors,
 	errorHandler,
+	wrapErrors,
 } = require("./utils/middleware/errorHandlers.js");
+
+const notFound = require("./utils/middleware/notFoundHandler");
 
 // middleware del body parser
 app.use(express.json());
 
+// routes
 moviesApi(app);
+// Catch 404
+app.use(notFound);
 
 // middleware de errores, siempre tienen que ir al final de las rutas
 app.use(logErrors);
+app.use(wrapErrors);
 app.use(errorHandler);
 
 app.listen(config.port, function () {
