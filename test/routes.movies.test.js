@@ -17,5 +17,15 @@ describe("routes -movies", () => {
 			// hacemos un get y esto es gracias a supertest
 			request.get("/api/movies").expect(200, done);
 		});
+
+		it("Should respond with the list of movies", function (done) {
+			request.get("/api/movies").end((err, res) => {
+				assert.deepStrictEqual(res.body, {
+					data: moviesMock,
+					message: "movies listed",
+				});
+				done();
+			});
+		});
 	});
 });
