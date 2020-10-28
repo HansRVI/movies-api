@@ -4,11 +4,13 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "DEBUG=app:* nodemon index",
+		"dev": "DEBUG=express:*,app:* nodemon index",
+		"debug": "DEBUG=express:*,app:* npm run start",
 		"start": "NODE_ENV=production node index",
 		"test": "mocha --exit",
 		"cover": "nyc npm run test",
-		"report": "nyc report --reporter=html && xdg-open coverage/index.html"
+		"report": "nyc report --reporter=html && xdg-open coverage/index.html",
+		"inspect": "DEBUG=express:*,app:* nodemon --inspect index"
 	},
 	"keywords": [],
 	"author": "",
@@ -40,9 +42,11 @@
 	},
 	"dependencies": {
 		"@hapi/boom": "^9.1.0",
+		"bcrypt": "^5.0.0",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
-		"mongodb": "^3.6.2"
+		"mongodb": "^3.6.2",
+		"vercel": "^20.1.1"
 	},
 	"nyc": {
 		"all": true,
