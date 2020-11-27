@@ -16,6 +16,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"chalk": "^4.1.0",
 		"eslint": "^7.8.1",
 		"eslint-config-prettier": "^6.11.0",
 		"eslint-plugin-prettier": "^3.1.4",
@@ -30,9 +31,7 @@
 		"supertest": "^4.0.2"
 	},
 	"husky": {
-		"hooks": {
-			
-		}
+		"hooks": {}
 	},
 	"lint-staged": {
 		"*.js": [
@@ -45,7 +44,11 @@
 		"bcrypt": "^5.0.0",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
+		"jsonwebtoken": "^8.5.1",
 		"mongodb": "^3.6.2",
+		"passport": "^0.4.1",
+		"passport-http": "^0.3.0",
+		"passport-jwt": "^4.0.0",
 		"vercel": "^20.1.1"
 	},
 	"nyc": {
