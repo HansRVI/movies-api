@@ -1,4 +1,4 @@
-const boom = require("@hapi/boom");
+const boom = require("@hapi/joi");
 const { config } = require("../../config/index");
 //funcionalidad de ayuda
 

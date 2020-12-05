@@ -1,4 +1,4 @@
-const boom = require("@hapi/boom");
+const boom = require("@hapi/joi");
 
 function validate() {
 	return false;
